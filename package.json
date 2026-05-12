@@ -1,0 +1,12 @@
+{
+  "name": "beijing-agent",
+  "version": "2.1.0",
+  "description": "大客户销售背调助手 - 自动生成公司背调报告",
+  "private": true,
+  "scripts": {
+    "print": "node scripts/to-print.js"
+  },
+  "dependencies": {
+    "marked": "^15.0.0"
+  }
+}

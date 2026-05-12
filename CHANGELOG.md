@@ -1,5 +1,24 @@
 # CHANGELOG
 
+## v2.1 (2026-05-13)
+
+### 新增
+- **报告打印功能**：`scripts/to-print.js` — 将 .md 背调报告转为打印优化的 HTML 页面，自动在浏览器中打开
+  - A4 纸张尺寸适配，20mm 页边距
+  - 中文排版优化（苹方/微软雅黑字体栈）
+  - 表格 CSS `page-break-inside: avoid` 防断页
+  - 标题 `page-break-after: avoid` 防孤行
+  - 顶部固定工具栏 + 一键 `window.print()` 按钮
+  - 屏幕/打印双样式（打印时自动缩字体、去边距）
+- **npm 项目化**：`package.json`，依赖 `marked` 做 Markdown→HTML 转换
+- **SKILL.md 集成**：阶段三新增打印命令提示
+
+### 优化
+- `.gitignore` 新增 `node_modules/`、`*.print.html`
+- README 新增"打印报告"章节，项目结构更新
+
+---
+
 ## v2.0 (2026-05-13)
 
 ### 新增

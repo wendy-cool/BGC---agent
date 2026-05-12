@@ -133,6 +133,11 @@ skill_type: prompt
 快速模式：生成报告保存到 `~/Desktop/{公司名}_背调报告_快速_{日期}.md`
 深度模式：生成报告保存到 `~/Desktop/{公司名}_背调报告_深度_{日期}.md`
 
+报告生成后，提醒用户可以使用以下命令将报告转为打印优化的 HTML 并在浏览器中打开：
+```
+node ~/projects/beijing-agent/scripts/to-print.js ~/Desktop/{报告文件名}.md
+```
+
 ## 报告模板
 
 ### 快速模式模板

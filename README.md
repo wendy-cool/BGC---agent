@@ -37,6 +37,18 @@ cp SKILL.md ~/.claude/skills/beijing/
 - 快速模式 → `~/Desktop/{公司名}_背调报告_快速_{日期}.md`
 - 深度模式 → `~/Desktop/{公司名}_背调报告_深度_{日期}.md`
 
+### 4. 打印报告
+
+将 .md 报告转为打印优化的 HTML，自动在浏览器中打开，直接 Cmd+P 即可打印：
+
+```bash
+cd ~/projects/beijing-agent
+npm install
+node scripts/to-print.js ~/Desktop/帆软_背调报告_深度_20260512.md
+```
+
+打印版特点：A4 纸张适配、中文排版优化、表格防断页、顶部一键打印按钮
+
 ## 示例输出
 
 | 公司 | 模式 | 报告 |
@@ -74,14 +86,17 @@ cp SKILL.md ~/.claude/skills/beijing/
 
 ```
 beijing-agent/
-├── LICENSE           # MIT
+├── LICENSE
 ├── README.md
-├── CHANGELOG.md      # 版本迭代记录
-├── SKILL.md          # 核心 Agent prompt
+├── CHANGELOG.md
+├── SKILL.md              # 核心 Agent prompt
+├── package.json
+├── scripts/
+│   └── to-print.js       # 报告转打印 HTML
 └── examples/
     └── fanruan-deep-report-20260512.md
 ```
 
 ## 版本
 
-当前版本：**v2.0** — 参见 [CHANGELOG.md](CHANGELOG.md)
+当前版本：**v2.1** — 参见 [CHANGELOG.md](CHANGELOG.md)
