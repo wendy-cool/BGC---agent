@@ -180,8 +180,13 @@ const html = `<!DOCTYPE html>
 
   /* Print-specific styles */
   @media print {
-    html, body {
+    html {
       margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin: 15mm;
       padding: 0;
       max-width: none;
       font-size: 12px;
