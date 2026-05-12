@@ -88,6 +88,9 @@ const html = `<!DOCTYPE html>
     margin: 12px 0;
     font-size: 13px;
     page-break-inside: avoid;
+    table-layout: fixed;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   th, td {
@@ -95,12 +98,14 @@ const html = `<!DOCTYPE html>
     padding: 6px 10px;
     text-align: left;
     vertical-align: top;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all;
   }
 
   th {
     background: #f5f5f5;
     font-weight: 600;
-    white-space: nowrap;
   }
 
   blockquote {
@@ -121,16 +126,23 @@ const html = `<!DOCTYPE html>
     border-radius: 3px;
     font-size: 13px;
     font-family: "SF Mono", "Fira Code", monospace;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all;
   }
 
   pre {
     background: #f5f5f5;
     padding: 12px 16px;
     border-radius: 4px;
-    overflow-x: auto;
     margin: 10px 0;
     font-size: 13px;
     line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    overflow-x: hidden;
   }
 
   pre code {
@@ -174,8 +186,9 @@ const html = `<!DOCTYPE html>
     h1 { font-size: 20px; }
     h2 { font-size: 16px; }
     h3 { font-size: 14px; }
-    table { font-size: 11px; }
-    pre, code { font-size: 11px; }
+    table { font-size: 11px; table-layout: fixed; }
+    th, td { font-size: 11px; word-wrap: break-word; overflow-wrap: break-word; }
+    pre, code { font-size: 11px; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; }
 
     .no-print { display: none !important; }
   }
