@@ -176,18 +176,22 @@ const html = `<!DOCTYPE html>
 
     body {
       margin: 0;
-      padding: 0 15mm;
+      padding: 15mm 15mm;
       max-width: none;
       font-size: 12px;
       line-height: 1.6;
+      orphans: 3;
+      widows: 3;
     }
 
-    h1 { font-size: 20px; }
-    h2 { font-size: 16px; }
-    h3 { font-size: 14px; }
+    h1 { font-size: 20px; page-break-before: avoid; }
+    h2 { font-size: 16px; page-break-before: avoid; }
+    h3 { font-size: 14px; page-break-before: avoid; }
     table { font-size: 11px; table-layout: fixed; }
     th, td { font-size: 11px; word-wrap: break-word; overflow-wrap: break-word; }
     pre, code { font-size: 11px; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; }
+
+    ul, ol { page-break-inside: avoid; }
 
     .no-print { display: none !important; }
   }
