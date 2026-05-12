@@ -34,10 +34,20 @@ const html = `<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${path.basename(resolvedPath, ".md")}</title>
 <style>
+  @page {
+    size: A4;
+    margin: 15mm;
+  }
+
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  html {
+    margin: 0;
+    padding: 0;
   }
 
   body {
@@ -170,13 +180,9 @@ const html = `<!DOCTYPE html>
 
   /* Print-specific styles */
   @media print {
-    @page {
-      margin: 20mm;
-    }
-
-    body {
+    html, body {
       margin: 0;
-      padding: 15mm 15mm;
+      padding: 0;
       max-width: none;
       font-size: 12px;
       line-height: 1.6;
