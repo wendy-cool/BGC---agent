@@ -176,7 +176,7 @@ const html = `<!DOCTYPE html>
 
     body {
       margin: 0;
-      padding: 0;
+      padding: 0 15mm;
       max-width: none;
       font-size: 12px;
       line-height: 1.6;
