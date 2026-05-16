@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## v2.2 (2026-05-16)
+
+### 新增
+- **Word 文档导出**：`scripts/to-docx.py` — 将 .md 背调报告转为排版良好的 Word (.docx) 文件
+  - 基于 python-docx 库，完整保留 Markdown 表格、标题层级、加粗、引用块、列表格式
+  - 表格自动应用 Word 原生表格样式（Light Grid Accent 1），表头加粗
+  - A4 纸张，微软雅黑字体，中文排版优化
+- **Word 导出 Node.js 封装**：`scripts/to-docx.js` — macOS 下调用 textutil 的快速导出方案
+
+### 优化
+- SKILL.md 阶段三新增 Word 导出命令提示
+
+---
+
 ## v2.1 (2026-05-13)
 
 ### 新增
